@@ -1,0 +1,249 @@
+@import 'spacing.scss';
+
+.App{
+    height:100vh;
+    width:100vw;
+    .header{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        font-size:20px;
+    }
+    .subHeader{
+        background-color:rgb(1, 138, 184);
+        padding: 0px 20px;
+        color:#fff;
+        width:100%;
+        .nav{
+            margin-left:20px;
+            .nav-item{
+                .nav-link{
+                    font-size: 13px;
+                    padding:0;
+                    margin:10px 15px;
+                    color:#fff;
+                    font-weight: bold;
+                    &.active {
+                        position: relative;
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: 3px;
+                            width: 100%;
+                            background: #fff;
+                            margin-top:2px;
+                            border-radius: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sessions{
+        width:100%;
+        padding:20px 10px;
+        .cardContents{
+            display:flex;
+            border: 1px solid rgb(221, 220, 220);
+            border-radius:2px;
+            .photo{
+                width: 145px;
+                height: 105px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .contents{
+                width:calc(100% - 150px);
+                padding:10px;
+                h3{
+                    color:rgb(1, 138, 184);
+                    white-space: nowrap;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin:0;
+                }
+                h5{
+                    white-space: nowrap;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin:0;
+                    margin-top:2px;
+                }
+                p{
+                    font-size: 11px;
+                    margin:5px 0px;
+                    line-height:10px;
+                }
+                .cost{
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h6{
+                        color:rgb(196, 196, 196);
+                        font-size: 11px;
+                        margin:0;
+                    }
+                    span{
+                        color:rgb(255, 30, 0);
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin:0;
+                    }
+                }
+            }
+        }
+
+    }
+    .customer{
+        width:100%;
+        padding:20px 10px;
+        .cus{
+            padding:20px 10px;
+            border: 1px solid rgb(221, 220, 220);
+            border-radius:2px;
+            .statuses{
+                h6{
+                    color: rgb(216, 130, 48);
+                    white-space:no-wrap;
+                    font-weight:bold;
+                    font-size:12px;
+                    margin:0;
+                }
+                h5{
+                    margin:0;
+                    color:rgb(158, 158, 158);
+                    font-size:11px;
+                    white-space:no-wrap;
+                }
+                .currentStatus{
+                    .roundbox{
+                        background-color: rgb(221, 221, 221);
+                        height:10px;
+                        width:10px;
+                    }
+                    .round{
+                        background-color: rgb(221, 221, 221);
+                        height:20px;
+                        width:20px;
+                        border-radius:50%;
+                        border:2px solid #fff;
+                        color:#fff;
+                        text-align:center;
+                        font-size:11px;
+                    }
+                    .rect{
+                        background-color: rgb(221, 221, 221);
+                        height:4px;
+                        width:55px;
+                    }
+                }
+                .statusName{
+                    h5{
+                        color:rgb(147, 147, 147);
+                        font-weight:bold;
+                        font-size:9px;
+                    }
+                }
+            }
+            .customerInfo{
+                width:100%;
+                margin:0 !important;
+                margin-top:10px !important;
+                margin-bottom:10px !important;
+                img{
+                    border-radius: 50%;
+                    height:30px;
+                    width:30px;
+                }
+                .custInfo{
+                    margin-left: 5px;
+                    h6{
+                        color:rgb(1, 138, 184);
+                        margin:0;
+                        font-size:12px;
+                        font-weight:bold;
+                    }
+                    h5{
+                        margin:0;
+                        font-size:11px;
+                        font-weight:bold;
+                    }
+                }
+                i{
+                    font-size:40px;
+                    opacity:0.3;
+                }
+                p{
+                    margin:0;
+                    margin-left: 10px;
+                    font-size:12px;
+                    font-weight:bold;
+                    line-height:12px;
+                }
+            }
+            .customerTime{
+                p{
+                    font-weight:bold;
+                    font-size: 12px;
+                    margin-bottom:5px;
+                    color:	rgb(153, 153, 153);
+                }
+                .timeTable{
+                    table{
+                        td{
+                            white-space: nowrap;
+                            font-weight: bold;
+                            font-size:12px;
+                        }
+                        .middle{
+                            padding:0 16px 0 8px !important;
+                        }
+                    }
+                }
+            }
+            .locations{
+                color:rgb(1, 138, 184);
+                padding: 10px 4px;
+                i{
+                    margin-right:5px;
+                }
+                p{
+                    font-size:11px;
+                    margin:0;
+                    white-space: nowrap;
+                    font-weight:bold;
+                }
+            }
+            .buttons{
+                display:flex;
+                justify-content: space-around;;
+                .re{
+                    color:rgb(1, 138, 184);
+                    border: 2px solid rgb(1, 138, 184);
+                    padding:5px;
+                    font-size:13px;
+                }
+                .acc{
+                    color:#fff;
+                    background-color:rgb(1, 138, 184);
+                    border: 2px solid rgb(1, 138, 184);
+                    padding:5px;
+                    font-size:13px;
+                }
+                .more{
+                    display:flex;
+                    flex-direction: column;
+                    color:rgb(1, 138, 184);
+                    align-items: center;
+                    span{
+                        font-weight: bold;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
