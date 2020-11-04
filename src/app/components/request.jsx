@@ -5,6 +5,9 @@ import Location from '../common/location';
 import Status from './elements/status';
 
 export default function Request(){
+
+  let button1={className: "re",name:"Reschedule"}
+  let button2={className:"acc", name:"Accept Request",link:"service"}
   return(
           <>
             <Status />
@@ -29,7 +32,7 @@ export default function Request(){
                 </div>
               </div>
             <Location />
-            <Buttons />
+            <Buttons button1={button1} button2={button2}/>
           </>
         )
 }

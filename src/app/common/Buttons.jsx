@@ -1,17 +1,14 @@
 import React from 'react';
 import {Button} from "react-bootstrap";
-import {connect} from 'react-redux';
-import yogaAction from '../store/yogaAction';
 
-function Buttons(props){
-
-    function handleClick(){
-        props.updateStatus(2);
+export default function Buttons({button1,button2}){
+    function handleClick(site){
+        window.location=`/home/${site}`;
     }
     return(
         <div className="buttons">
-            <Button variant="none" className="re">Reschedule</Button>
-            <Button variant="none" className="acc" onClick={handleClick}>Accept Request</Button>
+            <Button variant="none" className={button1?.className}>{button1?.name}</Button>
+            <Button variant="none" className={button2?.className} onClick={()=>handleClick(button2?.link)}>{button2?.name}</Button>
             <div className="more">
                 <i className="fas fa-ellipsis-h"></i>
                 <span>More</span>
@@ -19,13 +16,3 @@ function Buttons(props){
         </div>
     )
 }
-
-const mapStateToProps = state => ({
-    
-});
-const mapDispatchToProps ={
-    updateStatus: yogaAction.updateStatus,
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Buttons);

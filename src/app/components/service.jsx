@@ -5,6 +5,9 @@ import Location from '../common/location';
 import Status from './elements/status';
 
 export default function Service(){
+    let button1={className: "acc",name:"Check In"}
+    let button2={className:"acc", name:"Generate Invoice",link:"payment"}
+
     return(
             <>
                 <Status />
@@ -20,7 +23,7 @@ export default function Service(){
 
 
                 <Location />
-                <Buttons />
+                <Buttons button1={button1} button2={button2}/>
             </>
     )
 }

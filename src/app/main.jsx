@@ -9,12 +9,13 @@ import Sessions from './components/sessions';
 import Message from './components/elements/message';
 
 export default function Main(){
+
     return (
         <>
             <Header />
             <NavBar />
             <Sessions />
-            <Message />
+            {window.location.href.search("service") >=0 && <Message />}
 
             <div className="customer">
                 <div className="cus">
@@ -23,7 +24,7 @@ export default function Main(){
                             <Route path="/home/requests" component={Request}/>
                             <Route path="/home/service" component={Service} />
                             <Route path="/home/payment" component={Payment} />
-                            <Redirect exact from="/home" to="/home/service"/>
+                            <Redirect exact from="/home" to="/home/requests"/>
                         </Switch>
                     </Router>
                 </div>

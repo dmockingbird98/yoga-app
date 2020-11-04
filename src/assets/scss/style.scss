@@ -102,6 +102,7 @@
         background-color:rgb(1, 138, 184);
         width:100%;
         margin:0 !important;
+        display:flex;
         .block{
             padding:5px;
             .white-block{
@@ -173,6 +174,21 @@
                         background-color: rgb(221, 221, 221);
                         height:4px;
                         width:55px;
+                    }
+                    .blueBar{
+                        background-color: rgb(158, 203, 218);
+                        height:4px;
+                        width:55px;
+                    }
+                    .blue{
+                        background-color: rgb(158, 203, 218);
+                        height:20px;
+                        width:20px;
+                        border-radius:50%;
+                        border:2px solid #fff;
+                        color:#fff;
+                        text-align:center;
+                        font-size:11px;
                     }
                 }
                 .statusName{
