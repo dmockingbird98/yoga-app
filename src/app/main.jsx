@@ -7,6 +7,7 @@ import Payment from './components/payments';
 import Service from './components/service';
 import Sessions from './components/sessions';
 import Message from './components/elements/message';
+import response from '../data/clients.json';
 
 export default function Main(){
 
@@ -16,19 +17,16 @@ export default function Main(){
             <NavBar />
             <Sessions />
             {window.location.href.search("service") >=0 && <Message />}
+            
+            <Router >
+                <Switch>
+                    <Route path="/home/requests" render={props => <Request {...props} response={response?.data}/>}/>
+                    <Route path="/home/service" render={props => <Service {...props} response={response?.data} /> }/>
+                    <Route path="/home/payment" render={props => <Payment {...props} response={response?.data}/> }/>
+                    <Redirect exact from="/home" to="/home/requests"/>
+                </Switch>
+            </Router>
 
-            <div className="customer">
-                <div className="cus">
-                    <Router>
-                        <Switch>
-                            <Route path="/home/requests" component={Request}/>
-                            <Route path="/home/service" component={Service} />
-                            <Route path="/home/payment" component={Payment} />
-                            <Redirect exact from="/home" to="/home/requests"/>
-                        </Switch>
-                    </Router>
-                </div>
-            </div>
         </>
     )
 }

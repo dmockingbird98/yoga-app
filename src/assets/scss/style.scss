@@ -244,10 +244,13 @@
                 }
                 .timeTable{
                     table{
+                        i{
+                            opacity: 0.5;
+                        }
                         td{
                             white-space: nowrap;
                             font-weight: bold;
-                            font-size:12px;
+                            font-size:10px;
                         }
                         .middle{
                             padding:0 16px 0 8px !important;
