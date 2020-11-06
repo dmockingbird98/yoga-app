@@ -5,7 +5,7 @@ import Location from '../common/location';
 import Status from './elements/status';
 import pendingServices from '../../data/service.json';
 
-export default function Service({location}){
+export default function Service({location,handleNav}){
     let button1={className: "acc",name:"Check In"}
     let button2={className:"acc", name:"Generate Invoice",link:"payment"}
     let services = [...pendingServices.data];
@@ -31,7 +31,7 @@ export default function Service({location}){
                                                     </div>
                                                 </div>
                                                 <Location location={loc}/>
-                                                <Buttons button1={button1} button2={button2} setItem={{name,place,image,sessions,time,loc}}/>
+                                                <Buttons button1={button1} button2={button2} handleNav={handleNav} setItem={{name,place,image,sessions,time,loc}}/>
                                             </div>
                                         </div>
             )}

@@ -6,7 +6,7 @@ import Booking from './elements/booked';
 import Status from './elements/status';
 import payments from '../../data/payments.json';
 
-export default function Payment({location}){
+export default function Payment({location,handleNav}){
     let button1={className: "re",name:"Start Chat"}
     let button2={className:"acc", name:"Resend Invoice",link:"payment"}
 
@@ -26,7 +26,7 @@ export default function Payment({location}){
                                     <CustomerInfo name={name} place={place} image={image} deals={sessions.length}/>
                                     <Booking />
                                     <Location location={loc}/>
-                                    <Buttons button1={button1} button2={button2} setItem={{name,place,image,sessions,loc}}/>
+                                    <Buttons button1={button1} button2={button2} handleNav={handleNav} setItem={{name,place,image,sessions,loc}}/>
                                 </div>
                                 </div>
                 )}

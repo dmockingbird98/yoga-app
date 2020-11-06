@@ -5,7 +5,7 @@ import Location from '../common/location';
 import Status from './elements/status';
 import Table from './elements/table';
 
-export default function Request({response}){
+export default function Request({response,handleNav}){
   let blockes ={}
   response.map(({name}) => blockes[name]=true)
   const [itemTime,setItem] = useState({});
@@ -35,7 +35,7 @@ export default function Request({response}){
                     <CustomerInfo name={name} place={place} image={image} deals={sessions.length}/>
                     <Table free={free} selectedTime={handleClick} item={{name,location,image,age,place,sessions,free}}/>
                     <Location location={location}/>
-                    <Buttons button1={button1} button2={button2}  disabled= {blocked[name]}setItem={itemTime[name]} />
+                    <Buttons button1={button1} button2={button2} handleNav={handleNav} disabled= {blocked[name]}setItem={itemTime[name]} />
                   </div>
                 </div>
               )
