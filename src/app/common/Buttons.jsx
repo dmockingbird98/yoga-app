@@ -10,7 +10,7 @@ export default function Buttons({button1,button2,setItem}){
         <div className="buttons">
             <Button variant="none" className={button1?.className}>{button1?.name}</Button>
 
-            <Link to={{ pathname: `/home/${button2.link}`, state: { time:setItem } }}> 
+            <Link to={{ pathname: `/home/${button2.link}`, state: { time:setItem } }} > 
                 <Button variant="none" className={button2?.className}> {button2?.name}</Button>
             </Link>
             

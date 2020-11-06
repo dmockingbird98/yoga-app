@@ -244,6 +244,15 @@
                 }
                 .timeTable{
                     table{
+                        tr{
+                            background-color: #fff;
+                            &:focus,&:active,&::selection{
+                                background-color: aqua;
+                            }
+                            .selectTick{
+                                color:green;
+                            }
+                        }
                         i{
                             opacity: 0.5;
                         }
