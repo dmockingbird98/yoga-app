@@ -2,16 +2,16 @@ import React from 'react';
 import {Button} from "react-bootstrap";
 import {Link} from 'react-router-dom'
 
-export default function Buttons({button1,button2,setItem}){
+export default function Buttons({button1,button2,setItem, disabled}){
     // function handleClick(site){
     //     window.location=`/home/${site}`;
     // }
     return(
         <div className="buttons">
-            <Button variant="none" className={button1?.className}>{button1?.name}</Button>
+            <Button variant="none" disabled={disabled} className={button1?.className}>{button1?.name}</Button>
 
-            <Link to={{ pathname: `/home/${button2.link}`, state: { time:setItem } }} > 
-                <Button variant="none" className={button2?.className}> {button2?.name}</Button>
+            <Link to={{ pathname: `/home/${button2.link}`, state: { time:setItem } }} disabled={disabled} > 
+                <Button variant="none" className={button2?.className} disabled={disabled}> {button2?.name}</Button>
             </Link>
             
             <div className="more">
